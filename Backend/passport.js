@@ -1,4 +1,3 @@
-
 const db = require('./database.js');
 let users = db.users
 
@@ -9,7 +8,7 @@ const passportJWT = require("passport-jwt"),
     ExtractJWT = passportJWT.ExtractJwt,
     JWTStrategy = passportJWT.Strategy,
     LocalStrategy = require('passport-local').Strategy
-
+ 
 passport.use(
     new LocalStrategy({
         usernameField: 'username',

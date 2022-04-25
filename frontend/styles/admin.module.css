@@ -7,8 +7,8 @@
     align-items: center;
    
     font-family: 'Mali', cursive;
-    color: #e7eeec;
-    background-color:  rgb(238, 195, 139);
+    color: #6bd3b9;
+    background-color:  rgb(53, 50, 50);
   }
  
   .list {
@@ -16,7 +16,7 @@
     justify-content: center;
     list-style: none;
     margin: 10px;
-    padding: 10px;
+    padding: 1px;
     flex-wrap: wrap;
     width: 50vw;
     font-family: 'Mali', cursive;
@@ -26,17 +26,17 @@
   .listItem {
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid green;
     font-size: 1.4rem;
     text-align: center;
     font-family: 'Mali', cursive;
-    border-radius: 10px;
+    border-radius: 25px;
   }
   
   .byttonupdate{
-    background-color:#4caf65;;
+    background-color:#4CAF50;;
     border-radius: 12px;
     border: none;
     color: white;
@@ -84,9 +84,9 @@
     background-color: blue;
     border: none;
     color: white;
-    padding: 5px 10px;
+    padding: 5px 5px;
     text-align: center;
-    font-size: 10px;
+    font-size: 16px;
     margin: 4px 2px;
     margin-top: 15px;
     font-family: 'Mali', cursive;
@@ -94,16 +94,16 @@
 
   .formadd{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
-      margin: 5px;
-      padding: 5px;
-    
+      margin: 10px;
+      padding: 10px;
+      border: 2px solid rgb(126, 180, 1);
       font-size: 16px;
       text-align: center;
       font-family: 'Mali', cursive;
-      border-radius: 5px;
+      border-radius: 10px;
       align-items: center;
-      color: rgb(0, 0, 0);
+      color: rgb(126, 180, 1);
       
   }

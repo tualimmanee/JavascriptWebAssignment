@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import { useState } from 'react'
 import Navbar from '../components/navbar'
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 import axios from 'axios'
 import config from '../config/config'
 
@@ -29,7 +29,7 @@ export default function Login({ token }) {
     }
 
     const loginForm = () => (
-        <div className={styles.gridContainer}>
+        <div>
             <div>
                 Username:
             </div>
@@ -68,7 +68,7 @@ export default function Login({ token }) {
     
                 <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet"></link>
             </Head>
-            <div className={styles.container}>
+            <div class="bg-red-100 sm:h-screen ">
                 <Navbar />
                 <h1>Login</h1>
                 
@@ -81,25 +81,7 @@ export default function Login({ token }) {
                 <div>
                     <button   onClick={login}>Login</button>
                 </div>
-                <style jsx>{`
-                h1,h2,div,b,button{
-                  font-family: 'Mali', cursive;
-                }
-                button {
-                    background-color: #4CAF50; /* Green */
-                    border: none;
-                    border-radius: 12px;
-                    color: white;
-                    padding: 12px 20px;
-                    text-align: center;
-                    text-decoration: none;
-                    display: inline-block;
-                    font-size: 16px;
-                    margin: 4px 2px;
-                    cursor: pointer;
-                  }
-
-            `}</style>
+                
             </div>
         </Layout>
     )

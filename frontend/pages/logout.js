@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import { useEffect, useState } from 'react'
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 import axios from 'axios'
 import config from '../config/config'
 
@@ -32,7 +32,7 @@ export default function Logout({ token }) {
             <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet"></link>
                 <title>User profile</title>
             </Head>
-            <div className={styles.container}>
+            <div class="bg-red-100 sm:h-screen ">
                 <Navbar />
                 <h1>Logout</h1>
                 <div>

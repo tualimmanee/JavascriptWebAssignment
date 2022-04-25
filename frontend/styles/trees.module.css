@@ -74,20 +74,20 @@ justify-content: center;
 align-items: center;
 
 font-family: 'Mali', cursive;
-color: #050202;
-background-color: rgb(226, 179, 148);
+color: #6bd3b9;
+background-color: rgb(53, 50, 50);
 }
 .listItem {
 display: flex;
 flex-direction: column;
 margin: 20px;
 padding: 10px;
-border: 2px solid rgb(255, 255, 255);
+border: 2px solid green;
 font-size: 1.4rem;
 text-align: center;
 font-family: 'Mali', cursive;
-border-radius: 10px;
-background-color: rgb(245, 148, 169);
+border-radius: 25px;
+box-shadow: 0 10px 16px 0 rgb(174, 230, 129), 0 6px 20px 0 rgba(241, 237, 237, 0.973);
 }
 .form-add{
   display: flex;

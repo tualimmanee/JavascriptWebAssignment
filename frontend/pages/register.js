@@ -2,11 +2,11 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout'
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import axios from 'axios'
 import config from '../config/config'
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Register({ token }) {
 
@@ -39,7 +39,7 @@ export default function Register({ token }) {
     }
 
     const registerForm = () => (
-        <div className={styles.gridContainer}>
+        <div>
             
             <div>
                 Username:
@@ -82,13 +82,13 @@ export default function Register({ token }) {
     
                 <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet"></link>
             </Head>
-            <div className={styles.container}>
+            <div class="bg-red-100 sm:h-screen ">
                 <Navbar />
                 <h1>Register</h1>
                 
                  {status}
                 
-                <div className={styles.content}>
+                <div>
                     {registerForm()}
                 </div>
 
@@ -96,27 +96,8 @@ export default function Register({ token }) {
                     <button  onClick={register}>Register</button>
                     
                 </div>
-                <style jsx>{`
                 
-                h1,h2,ul{
-                  font-family: 'Mali', cursive;
-                }
-                button {
-                    background-color: #4CAF50; /* Green */
-                    border: none;
-                    border-radius: 12px;
-                    color: white;
-                    padding: 12px 20px;
-                    text-align: center;
-                    text-decoration: none;
-                    display: inline-block;
-                    font-size: 16px;
-                    margin: 4px 2px;
-                    cursor: pointer;
-                  }
-
-            `}</style>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+         
             </div>
         </Layout>
     )

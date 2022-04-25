@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import { useEffect, useState } from 'react'
-// import styles from '../styles/Home.module.css'
 import axios from 'axios'
 import config from '../config/config'
 
@@ -21,7 +20,7 @@ export default function Logout({ token }) {
     }
  
     return (
-        <Layout>
+        <Layout class="bg-red-100 sm:h-screen ">
             <Head>
             <meta charset="utf-8"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
@@ -34,17 +33,24 @@ export default function Logout({ token }) {
             </Head>
             <div class="bg-red-100 sm:h-screen ">
                 <Navbar />
-                <h1>Logout</h1>
-                <div>
-                <h3>{status}</h3>
+               
+                 <div class="py-20">
+                <div class="py-20">
+                <div class="py-20">
+                <div class="py-20">
+                <div class=" justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-9 grid grid-row-3 gap-3 pt-10 ">
+                <h1 class="pt-6 text-3xl text-blue-600 flex flex-col justify-around  items-center font-bold font-mono">Logout</h1>
+                <h1 class="pt-6 text-3xl text-blue-600 flex flex-col justify-around  items-center font-bold font-mono">{status}</h1>
+                
+               
+                
+                
+                </div>
+                </div>
+                </div>
+                </div>
                 </div>
                 
-                <style jsx>{`
-                h1,h2,ul,h3{
-                  font-family: 'Mali', cursive;
-                }
-
-            `}</style>
             </div>
         </Layout>
     )

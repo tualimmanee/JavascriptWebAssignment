@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import { useState } from 'react'
 import Navbar from '../components/navbar'
-// import styles from '../styles/Home.module.css'
 import axios from 'axios'
 import config from '../config/config'
 
@@ -29,7 +28,7 @@ export default function Login({ token }) {
     }
 
     const loginForm = () => (
-        <div>
+        <div class="font-mono">
             <div>
                 Username:
             </div>
@@ -58,7 +57,7 @@ export default function Login({ token }) {
 
     return (
         <Layout>
-            <Head>
+            <Head >
                 <title>Login</title>
                 <meta charset="utf-8"></meta>
     
@@ -70,7 +69,12 @@ export default function Login({ token }) {
             </Head>
             <div class="bg-red-100 sm:h-screen ">
                 <Navbar />
-                <h1>Login</h1>
+                <div class="py-20">
+                <div class="py-20">
+                <div class="py-20">
+                <div class="py-18">
+                <div class=" justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-9 grid grid-row-3 gap-3 pt-10 ">
+                <h1 class="pt-6 text-3xl text-blue-600 flex flex-col justify-around  items-center ">Login</h1>
                 
                 
                 <div>
@@ -79,9 +83,14 @@ export default function Login({ token }) {
                 
                 {loginForm()}
                 <div>
-                    <button   onClick={login}>Login</button>
+                    <button   onClick={login} class="shadow-md mr-4 bg-red-500 p-2 rounded-lg hover:bg-red-200 hover:text-red-500 font-bold font-mono">Login</button>
+                    
                 </div>
-                
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
             </div>
         </Layout>
     )

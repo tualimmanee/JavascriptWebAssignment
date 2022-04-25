@@ -26,11 +26,13 @@ router.use(express.urlencoded({ extended: false }))
 
 let pets = {
     list: [
-        { id: 1, name: 'ที่กลิ้งขน', number: 35, price: 150, imageurl:"https://th-live-01.slatic.net/p/de795d9eca9d686a055d31db24ed638c.jpg"} ,
-        { id: 2, name: 'อาหารสุนัข', number: 3,  price: 300, imageurl:"https://static.bigc.co.th/media/catalog/product/cache/2/image/17f82f742ffe127f42dca9de82fb58b1/8/8/8853301130158_9.jpg"},
-        { id: 3, name: 'อาหารแมว', number: 35, price: 250, imageurl:"https://cf.shopee.co.th/file/eb5d8b5a6702e184438b89684f553d17"} ,
-        { id: 4, name: 'ขนมสุนัข', number: 35, price: 99, imageurl:"https://cf.shopee.co.th/file/bf75904136ecbe94c6cd98dfb7b0f1d6"} ,
-        { id: 5, name: 'ขนมแมว', number: 35, price: 65, imageurl:"https://backend.tops.co.th/media/catalog/product/8/8/8850477013698_31-05-2021.jpg"} ,
+        { id: 1, name: 'โคโค่ (Coco)', number: 3, price:'มอลทีส', imageurl:"https://pbs.twimg.com/media/E_j3na3VQAM1TF5?format=jpg&name=900x900"} ,
+        { id: 2, name: 'ยางชี (Yangchi)', number: 1,  price:'บิชองฟริเซ่',imageurl:"https://pbs.twimg.com/media/E_j3jxiVkAUpeUP?format=jpg&name=900x900"},
+        { id: 3, name: 'โอตึ (Haute)', number: 2, price:'เกรย์ฮาวด์', imageurl:"https://pbs.twimg.com/media/E_j3jx2VQAUbk44?format=jpg&name=900x900"} ,
+        { id: 4, name: 'ซีโร่ (Zero)', number: 4, price:'พุดเดิลทอย', imageurl:"https://pbs.twimg.com/media/E_j3jxiVIAQBruF?format=jpg&name=900x900"} ,
+        { id: 6, name: 'ตาต้า (Ddadda)', number: 1, price:'ปอมเมอเรเนียน', imageurl:"https://pbs.twimg.com/media/E_j3nZwVIAEI-tZ?format=jpg&name=900x900"} ,
+        { id: 7, name: 'คุมะ&ไค (Kuma&Kai)', number: 3, price:'ปอมและค็อกเกอร์', imageurl:"https://pbs.twimg.com/media/E_j4EeMUUAUv226?format=jpg&name=900x900"}
+        
     ]
 }
 let income = 0

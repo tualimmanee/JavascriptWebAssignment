@@ -1,12 +1,10 @@
-
 import { useState } from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout'
-// import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
 import axios from 'axios'
 import config from '../config/config'
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function Register({ token }) {
 
@@ -41,29 +39,29 @@ export default function Register({ token }) {
     const registerForm = () => (
         <div>
             
-            <div>
+            <div  class="font-mono">
                 Username:
             </div>
-            <div>
+            <div  class="font-mono">
                 <input type="text"
                     name="username"
                     placeholder="username"
                     onChange={(e) => setUsername(e.target.value)}
                 />
             </div>
-            <div>
+            <div  class="font-mono">
                 Email:&nbsp;&nbsp;
             </div>
-            <div>
+            <div class="font-mono">
                 <input type="email"
                     name="email"
                     placeholder="email"
                     onChange={(e) => setEmail(e.target.value)} />
             </div>
-            <div>
+            <div  class="font-mono">
                 Password:&nbsp;&nbsp;
             </div>
-            <div>
+            <div  class="font-mono">
                 <input type="password"
                     name="password"
                     placeholder="password"
@@ -77,12 +75,36 @@ export default function Register({ token }) {
     return (
         <Layout>
             <Head>
-                <title>Register</title>
+                <title >Register</title>
     
     
                 <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet"></link>
             </Head>
             <div class="bg-red-100 sm:h-screen ">
+                <Navbar />
+                <div class="py-20">
+                <div class="py-20">
+                <div class="py-20">
+                <div class="py-18">
+                <div class=" justify-center bg-gradient-to-r from-purple-500 to-pink-500 p-9 grid grid-row-3 gap-3 pt-10 ">
+                <h1 class="pt-6 text-3xl text-blue-600 flex flex-col justify-around  items-center font-bold font-mono">Register</h1>
+                
+                
+                <div>
+                 {status}
+                </div>
+                
+                {registerForm()}
+                <div>
+                    <button   onClick={register} class="shadow-md mr-4 bg-red-500 p-2 rounded-lg hover:bg-red-200 hover:text-red-500 font-mono">Register</button>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            {/* <div class="bg-red-100 sm:h-screen ">
                 <Navbar />
                 <h1>Register</h1>
                 
@@ -93,12 +115,12 @@ export default function Register({ token }) {
                 </div>
 
                 <div>
-                    <button  onClick={register}>Register</button>
+                    <button  onClick={register}class="shadow-md mr-4 bg-red-500 p-2 rounded-lg hover:bg-red-200 hover:text-red-500">Register</button>
                     
                 </div>
                 
          
-            </div>
+            </div> */}
         </Layout>
     )
 }

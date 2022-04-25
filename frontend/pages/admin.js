@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Head from 'next/head'
-// import styles from '../styles/admin.module.css'
-//import useSWR, { mutate } from 'swr'
 import Navbar from "../components/navbar";
 import withAuth from "../components/withAuth";
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const URL = "http://localhost/api/pets";
 const URL2 = "http://localhost/api/income";
@@ -70,16 +67,16 @@ const SWR1 = () => {
             <div >
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"></link>
            
-                <li key={index}><link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet"></link>
-                    <h6>Id:{(pet) ? pet.id : 0}</h6>
-                    <h6>Name:{(pet) ? pet.name : '-'}</h6>
+                <li key={index} class=" rounded-lg outline outline-offset-1 outline-cyan-500 outline outline-offset-4"><link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap " rel="stylesheet"></link>
+                    
+                    <h6 >Name:{(pet) ? pet.name : '-'}</h6>
                     <img src={(pet.imageurl)} width="160" height="100"></img>
-                   <h6>Number:<button onClick={() => reduce(pet.id,pet.number)}>-</button>{(pet) ? pet.number : 0}<button onClick={() => addNumber(pet.id,pet.number)}>+</button></h6>
-                    Price:{(pet) ? pet.price : 0}
-                    <div class=" grid grid-cols  ">
-                    <button  onClick={() => deletePet(pet.id)} >Delete</button>
+                   <h6>Number:&nbsp;&nbsp;<button onClick={() => reduce(pet.id,pet.number)} class="border-2 border-indigo-600 rounded-full">&nbsp;- &nbsp;</button>{(pet) ? pet.number : 0}<button onClick={() => addNumber(pet.id,pet.number)} class="border-2 border-indigo-600 rounded-full">&nbsp;+&nbsp;</button></h6>
+                   Heredity: &nbsp;{(pet) ? pet.price : 0}
+                    <div class="pl-3 justify-around  items-center space-y-3 pb-3">
+                    <button  onClick={() => deletePet(pet.id)} class="shadow-md mr-4 bg-yellow-500 p-2 rounded-lg hover:bg-yellow-200 hover:text-red-500 " >Delete</button>
                    
-                    <button onClick={() => updatePet(pet.id)}>Update</button>
+                    <button onClick={() => updatePet(pet.id)} class="shadow-md mr-4 bg-red-500 p-2 rounded-lg hover:bg-red-200 hover:text-red-500">Update</button>
                    </div>
                 </li>
               
@@ -134,6 +131,7 @@ const SWR1 = () => {
 
     return (
         <div class="bg-red-100 sm:h-screen ">
+            <Navbar />
             
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"></link>
              <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"></link>
@@ -141,25 +139,24 @@ const SWR1 = () => {
         
         
         <div >
-          <Navbar />
+          
           <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet"></link>
           <div class="flex flex-col justify-around  items-center space-y-1 pb-14">
-        <h1>Admin</h1>
-        <h2>ยอดเงิน:{printIncome()}</h2>
-        selected pet: {pet.name} {pet.number} {pet.price} {pet.price} {pet.imageurl}
-        <ul class=" grid grid-cols-8 gap-10  ">{printPets()}</ul>
+        <h1 class="font-mono pt-10">Admin</h1>
+        
+       
+        <ul class=" grid grid-cols-8 gap-10  pt-10">{printPets()}</ul>
         
         
-        <ul class=" grid grid-row-8 gap-0 pt-10 " ><h2>Add item</h2>&nbsp;&nbsp;&nbsp;
-            Name:&nbsp;<input type="text" onChange={(e) => setName(e.target.value)} />
-            &nbsp; Quantity:&nbsp;<input type="number" onChange={(e) => setNumber(e.target.value)} /> 
-            &nbsp;Price:&nbsp;<input type="number" onChange={(e) => setPrice(e.target.value)} /> 
+        <ul class=" grid grid-row-8 gap-0 pt-10 font-mono" ><h2 class="font-mono">Add item</h2>&nbsp;Name:&nbsp;<input type="text" onChange={(e) => setName(e.target.value)} />
+            &nbsp;Age:&nbsp;<input type="number" onChange={(e) => setNumber(e.target.value)} /> 
+            &nbsp;Heredity:&nbsp;<input type="text" onChange={(e) => setPrice(e.target.value)} /> 
             &nbsp;image.url:&nbsp;<input type="Linkd" onChange={(e) => setImageurl(e.target.value)} /> 
-        
-            <button onClick={() => addPet(name,number, price,imageurl)}>Add new item</button>
+        <div class="pt-6"></div>
+            <button onClick={() => addPet(name,number, price,imageurl)} class="shadow-md mr-4 bg-red-500 p-2 rounded-lg hover:bg-red-200 hover:text-red-500 font-mono ">Add new item</button>
         </ul>
 
-        <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,300&display=swap " rel="stylesheet" ></link>
         
         </div>
      
